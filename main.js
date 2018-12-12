@@ -27,7 +27,7 @@ function quote() {
   });
 }
 
-// Changes the colour of the background each time a new quote is reeived
+// Changes the colour of the background each time a new quote is received
 function changeBgColor() {
   const a = Math.floor((Math.random() * 255) + 1);
   const b = Math.floor((Math.random() * 255) + 1);
@@ -35,7 +35,7 @@ function changeBgColor() {
   const rgbTotal = a + b + c;
   const bgColor = `rgb(${a}, ${b}, ${c})`;
 
-  // If rgbTotal is greater than 50% of 255+255+255, change heading colour.
+  // If rgb total is greater than 50% of 255+255+255, change heading colour.
   if (rgbTotal > 382) {
     $("#heading").css("color", "black");
   } else {
@@ -51,7 +51,6 @@ $("#new-quote").on("click", () => {
   quote();
   changeBgColor();
 });
-
 
 // On page load, quote is generated and background color set.
 $(document).ready(() => {
